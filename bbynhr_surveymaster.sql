@@ -30,8 +30,8 @@ CREATE TABLE `surveymaster` (
   `approvedDate` datetime DEFAULT NULL,
   `updatedDate` datetime DEFAULT NULL,
   `status` char(1) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `targetDeptID` int(6) DEFAULT NULL,
-  `targetGroupID` int(6) DEFAULT NULL,
+  `targetGroupName` varchar(40) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `targetDeptName` varchar(40) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`surveyCode`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -42,7 +42,7 @@ CREATE TABLE `surveymaster` (
 
 LOCK TABLES `surveymaster` WRITE;
 /*!40000 ALTER TABLE `surveymaster` DISABLE KEYS */;
-INSERT INTO `surveymaster` VALUES ('SUR1','COVID19 Vacine','AUTH','2022-06-15 14:12:00',NULL,NULL,'A',0,0);
+INSERT INTO `surveymaster` VALUES ('SUR1','COVID19 Vacine','AUTH','2022-06-16 00:39:00',NULL,NULL,'A','Any','Any'),('SUR2','HR Survery2021','ANONYMOUS','2022-06-16 00:55:46',NULL,NULL,'A','Any','Any');
 /*!40000 ALTER TABLE `surveymaster` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-15 14:36:29
+-- Dump completed on 2022-06-16  9:20:10

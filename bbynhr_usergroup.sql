@@ -24,13 +24,13 @@ DROP TABLE IF EXISTS `usergroup`;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `usergroup` (
   `groupID` int(6) NOT NULL AUTO_INCREMENT,
-  `groupName` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `groupName` varchar(40) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `createdDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `modified` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `status` varchar(1) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (`groupID`),
   UNIQUE KEY `groupName_UNIQUE` (`groupName`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `usergroup` (
 
 LOCK TABLES `usergroup` WRITE;
 /*!40000 ALTER TABLE `usergroup` DISABLE KEYS */;
-INSERT INTO `usergroup` VALUES (1,'Group1','2019-02-19 17:10:53','2019-02-19 17:10:53','A'),(3,'Group2','2019-02-19 17:11:50','2019-02-19 17:11:50','A');
+INSERT INTO `usergroup` VALUES (1,'IT Group','2019-02-19 17:10:53','2019-02-19 17:10:53','A'),(2,'HR','2022-06-15 22:51:28','2022-06-15 22:51:28','A'),(3,'Data Group','2019-02-19 17:11:50','2019-02-19 17:11:50','A'),(4,'Employee Relation','2022-06-15 22:51:28','2022-06-15 22:51:28','A');
 /*!40000 ALTER TABLE `usergroup` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-15 14:36:29
+-- Dump completed on 2022-06-16  9:20:17

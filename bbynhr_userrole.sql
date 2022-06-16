@@ -24,7 +24,7 @@ DROP TABLE IF EXISTS `userrole`;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `userrole` (
   `roleID` int(6) NOT NULL AUTO_INCREMENT,
-  `roleName` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `roleName` varchar(40) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `modified` datetime DEFAULT CURRENT_TIMESTAMP,
   `status` varchar(1) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
@@ -39,7 +39,7 @@ CREATE TABLE `userrole` (
 
 LOCK TABLES `userrole` WRITE;
 /*!40000 ALTER TABLE `userrole` DISABLE KEYS */;
-INSERT INTO `userrole` VALUES (1,'Systems Engg','2019-07-13 00:00:00',NULL,'A'),(2,'Master','2019-11-23 00:00:00','2019-11-23 19:46:32','A');
+INSERT INTO `userrole` VALUES (1,'Systems Engg','2019-07-13 00:00:00',NULL,'A'),(2,'Master','2019-11-23 00:00:00','2019-11-23 19:46:32','A'),(3,'User','2022-06-15 22:54:35','2022-06-15 22:54:35','A'),(4,'Admin','2022-06-15 22:54:35','2022-06-15 22:54:35','A');
 /*!40000 ALTER TABLE `userrole` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-15 14:36:28
+-- Dump completed on 2022-06-16  9:20:15
