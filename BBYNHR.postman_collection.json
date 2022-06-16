@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "e0040fd7-67f4-456b-b0cc-9db215887163",
+		"name": "BBYNHR",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://192.168.8.147:8080/HRAPP/json/hrapp/surveyMaster",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.8.147:8080/HRAPP/json/hrapp/surveyMaster",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"8",
+						"147"
+					],
+					"port": "8080",
+					"path": [
+						"HRAPP",
+						"json",
+						"hrapp",
+						"surveyMaster"
+					],
+					"query": [
+						{
+							"key": "empID",
+							"value": "02221u",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://192.168.8.147:8080/HRAPP/json/hrapp/validateUser",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"empID\":\"02221u\",\r\n    \"password\":\"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.8.147:8080/HRAPP/json/hrapp/validateUser",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"8",
+						"147"
+					],
+					"port": "8080",
+					"path": [
+						"HRAPP",
+						"json",
+						"hrapp",
+						"validateUser"
+					],
+					"query": [
+						{
+							"key": "empID",
+							"value": "02221u",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
